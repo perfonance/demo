@@ -18,10 +18,9 @@ public class JWTProvider {
     public static final Logger LOG = LoggerFactory.getLogger(JWTProvider.class);
 
     public String generateToken(Authentication authentication) {
-        User user = (User) authentication.getAuthorities();
+        User user = (User) authentication.getPrincipal();
 
         Date now = new Date(System.currentTimeMillis());
-
         Date expirationTime = new Date(now.getTime() + SecurityConstants.EXPIRATION_TIME);
 
         String userId = Long.toString(user.getId());

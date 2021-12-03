@@ -1,4 +1,4 @@
-package com.example.instogramm.payload;
+package com.example.instogramm.payload.response;
 
 public class InvalidLoginResponse {
     private String username;

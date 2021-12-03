@@ -1,6 +1,6 @@
 package com.example.instogramm.security.jwt;
 
-import com.example.instogramm.payload.InvalidLoginResponse;
+import com.example.instogramm.payload.response.InvalidLoginResponse;
 import com.example.instogramm.security.SecurityConstants;
 import com.google.gson.Gson;
 import org.springframework.http.HttpStatus;

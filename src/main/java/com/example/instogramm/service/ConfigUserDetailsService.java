@@ -35,8 +35,8 @@ public class ConfigUserDetailsService implements UserDetailsService {
         //Наделяем нашего пользователя полномочиями
         return new User(user.getId(),
                 user.getUsername(),
-                user.getEmail(),
                 user.getPassword(),
+                user.getEmail(),
                 authorityList);
     }
 
