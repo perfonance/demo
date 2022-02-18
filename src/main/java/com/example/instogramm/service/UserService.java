@@ -51,7 +51,6 @@ public class UserService {
         user.setFirstname(userDTO.getFirstname());
         user.setLastname(userDTO.getLastname());
         user.setInfo(userDTO.getInfo());
-
         return userRepository.save(user);
     }
 
@@ -60,8 +59,7 @@ public class UserService {
     }
 
     public User getUserById(Long userId) {
-        return userRepository.findUserById(userId)
-                .orElseThrow(() -> new UsernameNotFoundException("User not found"));
+        return userRepository.findUserById(userId).orElseThrow(() -> new UsernameNotFoundException("User not found"));
     }
 
     public User getUserByPrincipal(Principal principal) {
